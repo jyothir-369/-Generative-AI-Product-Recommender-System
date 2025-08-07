@@ -1,64 +1,80 @@
-🧠 Generative AI Product Recommender System
-This project presents a smart product recommendation system developed as a demonstration of applying Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG) pipelines to real-world product discovery scenarios. It allows users to input natural language queries (e.g., job descriptions or role summaries) and receive precise recommendations for relevant SHL products.
+# 🧠 Generative AI Product Recommender System
 
-🚀 Key Features
-🔍 Semantic Search using FAISS over a structured product metadata catalog
+This project presents a smart product recommendation system that demonstrates the application of **Large Language Models (LLMs)** and **Retrieval-Augmented Generation (RAG)** pipelines in real-world product discovery scenarios. Designed for enhanced user experience and decision-making, the system allows users to input **natural language queries** (e.g., job descriptions or role summaries) and receive precise, metadata-rich recommendations for SHL products.
 
-🧠 LLM-Based Reranking with Claude 3 Haiku to enhance result precision
+---
 
-📋 Rich Metadata Display:
+## 🚀 Key Features
 
-Duration
+- 🔍 **Semantic Search**  
+  Uses **FAISS** to perform fast, similarity-based retrieval over structured product metadata.
 
-Product type
+- 🧠 **LLM-Based Reranking**  
+  Enhances precision using **Claude 3 Haiku** (via OpenRouter) to rerank top results intelligently.
 
-Remote compatibility
+- 📋 **Rich Metadata Display**  
+  - Product Duration  
+  - Product Type  
+  - Remote Compatibility  
+  - Adaptive Support  
+  - Download Availability  
 
-Adaptive support
+- 🎯 **Precision Mode**  
+  Returns the **Top 3** most relevant SHL products per query.
 
-Download availability
+- ⚙️ **FastAPI Backend**  
+  Simple RESTful endpoint at `/recommend`.
 
-🎯 Precision Mode: Retrieves the Top 3 most relevant products
+- 🖼️ **Streamlit Frontend**  
+  Clean, interactive user interface for querying and viewing recommendations.
 
-⚙️ FastAPI Backend with a simple /recommend API endpoint
+- 💬 **Optional Conversational Chatbot**  
+  Integrated multimodal chatbot using **Gemini**, **DeepSeek**, or **LLaMA3** for richer user engagement (`step1_rag.py`).
 
-🖼️ Streamlit Frontend for interactive querying
+---
 
-💬 Optional Conversational Chatbot (step1_rag.py) powered by Gemini, DeepSeek, or LLaMA3
+## 📁 Project Structure
 
-📁 Project Structure
-bash
-Copy
-Edit
 shl-recommender/
-├── data/              # Product metadata and FAISS index
-├── recommender/       # Core recommendation logic
-│   └── core.py
-├── streamlit_app/     # Streamlit-based frontend
-│   └── app.py
-├── api/               # FastAPI backend server
-│   └── main.py
-├── scraping/          # Web scraping scripts using Selenium + BeautifulSoup
-├── step1_rag.py       # Optional multimodal chatbot integration
-├── SHL_Generative_AI_Summary.pdf # Final summary report
-├── requirements.txt   # Python dependencies
-├── README.md          # Project documentation
-└── .devcontainer/     # Dev container config (optional)
-🧰 Tech Stack
-Component	Tool / Library
-Embeddings	BAAI bge-small-en-v1.5
-Vector DB	FAISS
-Reranker	Claude 3 Haiku (via OpenRouter)
-Frontend	Streamlit
-Backend	FastAPI
-Chatbot	Gemini, DeepSeek, LLaMA3
-Scraping	Selenium + BeautifulSoup
+├── data/ # Product metadata and FAISS index
+├── recommender/ # Core recommendation logic
+│ └── core.py
+├── streamlit_app/ # Streamlit-based frontend
+│ └── app.py
+├── api/ # FastAPI backend server
+│ └── main.py
+├── scraping/ # Web scraping scripts (Selenium + BeautifulSoup)
+├── step1_rag.py # Optional RAG-based chatbot integration
+├── SHL_Generative_AI_Summary.pdf # Project summary
+├── requirements.txt # Python dependencies
+├── README.md # Project documentation
+└── .devcontainer/ # Dev container config (optional)
 
-▶️ Getting Started
-1. Clone the repository
-bash
+yaml
 Copy
 Edit
+
+---
+
+## 🧰 Tech Stack
+
+| Component       | Tool / Library                |
+|----------------|-------------------------------|
+| Embeddings      | `BAAI/bge-small-en-v1.5`       |
+| Vector DB       | FAISS                         |
+| Reranker        | Claude 3 Haiku (via OpenRouter) |
+| Frontend        | Streamlit                     |
+| Backend         | FastAPI                       |
+| Chatbot         | Gemini, DeepSeek, LLaMA3      |
+| Scraping        | Selenium + BeautifulSoup      |
+
+---
+
+## ▶️ Getting Started
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/jyothir-369/SHL-RAG-assignment.git
 cd SHL-RAG-assignment
 2. Install dependencies
@@ -71,22 +87,23 @@ bash
 Copy
 Edit
 uvicorn api.main:app --reload
-Test the endpoint:
-http://localhost:8000/recommend?q=productivity manager
+Test endpoint at: http://localhost:8000/recommend?q=productivity manager
 
 4. Start the Streamlit Frontend
 bash
 Copy
 Edit
 streamlit run streamlit_app/app.py
-Access frontend locally at:
-http://localhost:8501
-
-Or via network:
-http://<your-ip>:8501
+Access UI locally at: http://localhost:8501
 
 🌐 Deployment
-Component	URL
-Live UI	Streamlit App
-API Endpoint	Coming soon
+Component	URL / Status
+Live UI	Coming Soon
+API Endpoint	Coming Soon
 GitHub Repo	SHL-RAG-assignment
+
+🙌 Acknowledgements
+Special thanks to OpenRouter, SHL, and the open-source communities for enabling this real-world LLM integration project.
+
+📫 Contact
+If you'd like to collaborate or discuss improvements, feel free to reach out via GitHub or connect on LinkedIn.
