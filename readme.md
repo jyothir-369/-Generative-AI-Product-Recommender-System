@@ -53,6 +53,8 @@ shl-recommender/
 ├── requirements.txt             # Python dependencies
 ├── README.md                    # This file
 └── .devcontainer/               # Optional VS Code dev container configuration
+
+
 --- 
 ## 🧰 Tech Stack
 
@@ -72,7 +74,7 @@ shl-recommender/
 
 ### 1. Clone the repository
 
-```bash
+```
 git clone https://github.com/jyothir-369/SHL-RAG-assignment.git
 cd SHL-RAG-assignment
 2. Install dependencies
