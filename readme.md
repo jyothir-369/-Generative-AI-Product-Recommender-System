@@ -39,7 +39,7 @@ Alternative compact & stylish version (very popular in 2024–2025 repos):
 ```markdown
 ## 📁 Project Layout
 
-```text
+```
 shl-recommender/
 ├─ data/                    → product data & FAISS index
 ├─ recommender/             → core recommendation logic
