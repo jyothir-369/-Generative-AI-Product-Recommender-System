@@ -36,27 +36,24 @@ This project presents a smart product recommendation system that demonstrates th
 
 Alternative compact & stylish version (very popular in 2024–2025 repos):
 
-```markdown
-## 📁 Project Layout
+## 📂 Project Structure
 
-```
+```text
 shl-recommender/
-├─ data/                    → product data & FAISS index
-├─ recommender/             → core recommendation logic
-│  └─ core.py
-├─ streamlit_app/           → Streamlit frontend
-│  └─ app.py
-├─ api/                     → FastAPI backend
-│  └─ main.py
-├─ scraping/                → data collection scripts
-├─ step1_rag.py             → optional RAG / LLM prototype
-├─ SHL_Generative_AI_Summary.pdf
-├─ requirements.txt
-├─ README.md
-└─ .devcontainer/           → (optional) dev container config
-
----
-
+├── data/                        # Product metadata, embeddings, FAISS index
+├── recommender/                 # Core recommendation engine
+│   └── core.py
+├── streamlit_app/               # Interactive frontend (Streamlit)
+│   └── app.py
+├── api/                         # REST API server (FastAPI)
+│   └── main.py
+├── scraping/                    # Web scraping scripts (Selenium + BeautifulSoup)
+├── step1_rag.py                 # Optional / experimental RAG + LLM integration
+├── SHL_Generative_AI_Summary.pdf  # Project documentation & summary
+├── requirements.txt             # Python dependencies
+├── README.md                    # This file
+└── .devcontainer/               # Optional VS Code dev container configuration
+--- 
 ## 🧰 Tech Stack
 
 | Component       | Tool / Library                |
