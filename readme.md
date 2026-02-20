@@ -76,21 +76,15 @@ shl-recommender/
 git clone https://github.com/jyothir-369/SHL-RAG-assignment.git
 cd SHL-RAG-assignment
 2. Install dependencies
-bash
-Copy
-Edit
+
+
 pip install -r requirements.txt
 3. Launch the FastAPI Backend
-bash
-Copy
-Edit
+
 uvicorn api.main:app --reload
 Test endpoint at: http://localhost:8000/recommend?q=productivity manager
 
 4. Start the Streamlit Frontend
-bash
-Copy
-Edit
 streamlit run streamlit_app/app.py
 Access UI locally at: http://localhost:8501
 
